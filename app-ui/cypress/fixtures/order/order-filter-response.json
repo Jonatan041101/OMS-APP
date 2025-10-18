@@ -1,0 +1,30 @@
+{
+    "success": true,
+    "message": "Orders retrieved successfully.",
+    "data": [
+        {
+            "id": "b9505b92-3507-45df-8d53-c1aa5304f7b2",
+            "customerName": "Alis",
+            "item": "Bambulab A1 Mini",
+            "status": "pending",
+            "quantity": 2,
+            "createdAt": "2025-10-18T00:00:39.415Z",
+            "updatedAt": "2025-10-18T00:47:54.763Z"
+        },
+        {
+            "id": "2171542f-1b90-4779-8d91-2ad9a3c38ba1",
+            "customerName": "Alis",
+            "item": "Bambulab A1",
+            "status": "pending",
+            "quantity": 2,
+            "createdAt": "2025-10-18T01:05:41.548Z",
+            "updatedAt": "2025-10-18T01:05:41.548Z"
+        }
+    ],
+    "meta": {
+        "itemCount": 7,
+        "pageNumber": 1,
+        "pageSize": 2,
+        "pageCount": 4
+    }
+}

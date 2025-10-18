@@ -1,0 +1,13 @@
+{
+    "succes": true,
+    "message": "The order was created successfully.",
+    "data": {
+        "id": "e0a1c793-8d5b-4989-a32b-1d846ab9a8e8",
+        "customerName": "Jonatan",
+        "item": "Laptop",
+        "status": "pending",
+        "quantity": 1,
+        "createdAt": "2025-10-17T23:41:24.238Z",
+        "updatedAt": "2025-10-17T23:41:24.240Z"
+    }
+}
