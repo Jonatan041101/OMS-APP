@@ -27,6 +27,7 @@
 	"dependencies": {
 		"@oms/common-types": "^1.0.0",
 		"@tanstack/react-query": "^5.64.1",
+		"axios": "^1.12.2",
 		"dotenv": "^16.4.5",
 		"formik": "^2.4.5",
 		"react": "^18.2.0",
