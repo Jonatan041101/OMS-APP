@@ -14,7 +14,7 @@ export default function OrderDetailPage() {
 	const { data } = useGetOneOrder(id);
 	const navigate = useNavigate()
 	return (
-		<div className="w-full max-w-[640px]">
+		<div className="w-full max-w-[450px] flex flex-col flex-1">
 			<header className="sticky top-0 z-10 flex items-center justify-between border-b border-border-light bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
 				<Link to="/" className="text-foreground-light dark:text-foreground-dark">
 					<svg
@@ -35,7 +35,7 @@ export default function OrderDetailPage() {
 				</h1>
 				<div className="w-6" />
 			</header>
-			<main className="p-4">
+			<main className="p-4 flex-1 flex flex-col justify-between h-full">
 				<section className="mb-6 rounded-lg bg-background-light dark:bg-background-dark">
 					<div className="divide-y divide-border-light dark:divide-border-dark">
 						<OrderDetailRow dataTest="order-detail-row-id" label="Order ID" value={data?.data.id} />

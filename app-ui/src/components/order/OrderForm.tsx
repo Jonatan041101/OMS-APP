@@ -41,7 +41,7 @@ export default function OrderForm({ onClose, onSubmit, initialValues ,className}
 			onSubmit={formik.handleSubmit}
 			data-test="order-form"
 		>
-			<div className='w-full max-w-[450px] flex flex-col'>
+			<div className='w-full max-w-[450px] flex flex-col flex-1'>
 			<div className="flex items-center justify-between p-2 border-b border-background-light dark:border-background-dark/20 bg-background-light dark:bg-background-dark">
 				<button
 					className="flex items-center justify-center w-10 h-10 text-gray-700 dark:text-gray-300"
@@ -59,7 +59,8 @@ export default function OrderForm({ onClose, onSubmit, initialValues ,className}
 				</h1>
 				<div className="w-10" />
 			</div>
-			<div className="flex-1 p-4 space-y-6">
+		<div className='flex-1 flex flex-col justify-between'>
+		<div className="flex-1 p-4 space-y-6">
 				<InputField
 					dataTest="order-form-client-name"
 					value={formik.values.customerName}
@@ -117,15 +118,8 @@ export default function OrderForm({ onClose, onSubmit, initialValues ,className}
 					isDisabled={formik.isSubmitting}
 					dataTest="order-form-button-submit"
 				/>
-				{/* <button
-					disabled={g}
-					className="w-full h-12 px-5 text-base font-bold text-white rounded-lg bg-primary disabled:opacity-20"
-					type="submit"
-					data-test=""
-				>
-					{submitButtonText}
-				</button> */}
 			</div>
+		</div>
 			</div>
 		</form>
 	);
