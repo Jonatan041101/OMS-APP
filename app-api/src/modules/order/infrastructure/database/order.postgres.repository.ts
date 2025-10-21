@@ -29,6 +29,7 @@ export class OrderPostgresRepository implements IOrderRepository {
       limit: pageSize,
       offset,
       where: options.filter,
+      order:[['createdAt','DESC']]
     });
 
     return {

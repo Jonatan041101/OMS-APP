@@ -24,11 +24,14 @@ export default function OrderUpdateForm({ onClose, order }: IOrderUpdateForm) {
 	) => {
 		try {
 			const mappedOrder = orderMapper.fromUpdateOrderDtoToUpdateOrderRequest(order, values);
+		console.log(mappedOrder,"mappedOrder")
 			await mutateAsync({ upddateOrderDto: mappedOrder, orderId: order.id });
+		console.log("Despues de el mutateAsync")
 			formikHelpers.resetForm();
 			onClose();
 			notificationService.success(ORDER_SUCCESS_MESSAGES.UPDATE_SUCCESS);
 		} catch (error) {
+			console.log(error,"error")
 			if (error instanceof ApiResponseError) {
 				notificationService.error(error.message);
 			} else {

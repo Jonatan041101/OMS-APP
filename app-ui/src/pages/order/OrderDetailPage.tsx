@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 
 import OrderDeleteForm from '@/components/order/OrderDeleteForm';
 import OrderDetailRow from '@/components/order/OrderDetailRow';
@@ -12,6 +12,7 @@ export default function OrderDetailPage() {
 	const [activeMode, setActiveMode] = useState<ActiveMode>('None');
 	const { id } = useParams();
 	const { data } = useGetOneOrder(id);
+	const navigate = useNavigate()
 	return (
 		<div className="w-full max-w-[640px]">
 			<header className="sticky top-0 z-10 flex items-center justify-between border-b border-border-light bg-background-light/80 px-4 py-3 backdrop-blur-sm dark:border-border-dark dark:bg-background-dark/80">
@@ -75,7 +76,10 @@ export default function OrderDetailPage() {
 				<OrderUpdateForm onClose={() => setActiveMode('None')} order={data.data} />
 			)}
 			{activeMode === 'Delete' && data?.data && (
-				<OrderDeleteForm onClose={() => setActiveMode('None')} order={data.data} />
+				<OrderDeleteForm onClose={() => {
+					setActiveMode('None')
+					navigate("/")
+				}} order={data.data} />
 			)}
 		</div>
 	);
