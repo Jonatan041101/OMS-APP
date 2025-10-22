@@ -21,7 +21,6 @@ class OrderService implements IOrderService {
 
 		const params = new URLSearchParams({
 			'page[number]': String(options.page?.number),
-			'page[size]': String(options.page?.size),
 			...filter,
 		});
 		return await this.api.get<IListResponse<IOrder>>(`/order?${params}`);

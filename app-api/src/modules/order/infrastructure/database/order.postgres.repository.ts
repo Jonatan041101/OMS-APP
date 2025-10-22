@@ -21,7 +21,7 @@ export class OrderPostgresRepository implements IOrderRepository {
   }
 
   async getAll(options: IGetAllOptionsQuery<Order>): Promise<ICollection<IOrder>> {
-    const pageSize = options.page?.size ?? 10;
+    const pageSize = options.page?.size ?? 5;
     const pageNumber = options.page?.number ?? 1;
     const offset = (pageNumber - 1) * pageSize;
 
