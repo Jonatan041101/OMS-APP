@@ -1,0 +1,30 @@
+{
+    "success": true,
+    "message": "Orders retrieved successfully.",
+    "data": [
+        {
+            "id": "f26937d6-b975-44b1-b135-135a05773da9",
+            "customerName": "Angel",
+            "item": "K1 Creality",
+            "status": "pending",
+            "quantity": 12,
+            "createdAt": "2025-10-17T21:40:37.691Z",
+            "updatedAt": "2025-10-17T21:40:37.691Z"
+        },
+        {
+            "id": "1111368f-5f4b-4df1-ab73-08a3a6153b5b",
+            "customerName": "Angel",
+            "item": "K1 Creality",
+            "status": "pending",
+            "quantity": 12,
+            "createdAt": "2025-10-17T21:40:38.801Z",
+            "updatedAt": "2025-10-17T21:40:38.801Z"
+        }
+    ],
+    "meta": {
+        "itemCount": 7,
+        "pageNumber": 1,
+        "pageSize": 2,
+        "pageCount": 4
+    }
+}

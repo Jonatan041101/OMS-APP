@@ -1,0 +1,10 @@
+{
+    "name": "order-managment-system",
+    "version": "1.0.0",
+    "private": true,
+    "workspaces": [
+      "app-api",
+      "app-ui",
+      "common-types"
+    ]
+  }
